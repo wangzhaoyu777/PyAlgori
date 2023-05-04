@@ -9,11 +9,11 @@ def binary_search(data_list, value):
     while left <= right:
         index = (left + right) // 2
         if data_list[index] == value:
-            return print(index)
+            return index
         elif data_list[index] > value:
             right = index -1
-        else:# data_list[index] < value:
+        else: # data_list[index] < value:
             left = index +1
     else:
-        return print('None')
+        return None
 binary_search(b, 4)

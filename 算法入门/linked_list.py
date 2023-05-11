@@ -2,25 +2,24 @@
 # time: 2023-05-11 8:53 a.m.
 class Node:
     def __init__(self, item:int):
-        self.item = item
+        self.item = item            #
         self.next = None
 
-def create_ll_head(li:list[int]):
+def create_ll_head(li:list[int]):   # add node before head
+    head = Node(li[0])              # create the very first node is head
+    for element in li[1:]:          # iterate elements in the list, after the first item
+        node = Node(element)        # create a node
+        node.next = head            # make the node point to the current head
+        head = node                 # then make this node as the head
+    return head                     # return head so that other item can be found
 
-    head = Node(li[0])
-    for element in li[1:]:
-        node = Node(element)
-        node.next = head
-        head = node
-    return head
-
-def create_ll_tail(li:list[int]):
-    head = Node(li[0])
-    tail = head
-    for element in li[1:]:
-        node = Node(element)
-        tail.next = node
-        tail = node
+def create_ll_tail(li:list[int]):   # add node behind tail
+    head = Node(li[0])              # same as former function
+    tail = head                     # now we need a tail which is same as head at this moment,there is only one item
+    for element in li[1:]:          # iterate element in list
+        node = Node(element)        #
+        tail.next = node            # tail point to the new node
+        tail = node                 #
     return head
 
 def print_ll(ll):

@@ -7,7 +7,7 @@
 #     else:
 #         return print('None')
 def linear_search(data_list, value):
-    for i in range(len(data_list)):
+    for i in range(len(data_list)-1):
         if value == data_list[i]:
             return print(i)
 linear_search([1,2,3,4,5,6], 2)

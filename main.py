@@ -18,5 +18,3 @@
 #     'test'
 # )
 
-my_dict ={'a':1, 'b':2, 'c':2}
-print(my_dict.get('b',32)+1)

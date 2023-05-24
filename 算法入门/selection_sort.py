@@ -2,15 +2,17 @@
 # time: 2023-05-03 8:17 p.m.
 import random
 
-
-def selection_sort(data_list):
-    for i in range(len(data_list)-1):
-        min_index = i
-        for j in range(i+1, len(data_list)):
-            if data_list[j] < data_list[min_index]:
-                min_index = j
-        data_list[i],data_list[min_index] = data_list[min_index], data_list[i]
-a = [random.randint(0,20) for i in range(9)]
+def selection_sort(a):
+    #从第i+1个数开始到最后一个进行查找，选最小的数然后和i换位置
+    n = len(a)
+    for i in range(n-1):
+        min = i
+        for j in range(i+1, n):
+            if a[j]<a[min]:
+                min = j
+        a[i], a[min]= a[min],a[i]
+# a = [random.randint(0,20) for i in range(9)]
+a = [10, 18, 11, 19, 20, 8, 6, 16, 17]
 print(a)
 selection_sort(a)
 print(a)

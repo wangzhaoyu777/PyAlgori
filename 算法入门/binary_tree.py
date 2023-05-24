@@ -26,6 +26,9 @@ root = e
 #       A       G
 #         C       F
 #       B   D
+
+
+
 def pre_order(root):
     if root:
         print(root.data , end=', ')
